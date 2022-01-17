@@ -1,0 +1,27 @@
+header {
+  position: absolute;
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+  top:15px;
+  
+  .img-logo {
+    width:40px;
+    height:40px;
+  }
+  .btn-container {
+       justify-self:end;
+       align-self:center;
+
+    .nav-toggle {
+      border-color: transparent;
+      background-color: transparent;
+
+      .bars {
+        color:$text-color-wk;
+        font-size:25px;
+      }
+    }
+  }
+
+}
