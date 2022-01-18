@@ -1,6 +1,40 @@
 .home {
-    background-image: url('');
+    background-image: url('../bg-images/background-home-mobile.jpg');
     background-color: $background;
     width: 100vw;
     height: 100vh;
+    padding: 0 20px;
+    display: grid;
+    grid-template-rows: 1fr .5fr;
+    color: $text-color-wk;
+
+    .desc {
+        width: 327px;
+        text-align: center;
+        line-height: 1.5;
+        align-self: center;
+
+        p:nth-child(1),
+        p:nth-child(2) {
+            text-transform: uppercase;
+            letter-spacing: .07cm;
+        }
+
+        p:nth-child(2) {
+            font-size: 100px;
+        }
+    }
+
+    .explore {
+        display: grid;
+        place-items: center;
+        width: 150px;
+        height: 150px;
+        align-self: start;
+        justify-self: center;
+        border-radius: 50%;
+        background: $text-color-wk;
+        color: $text-color-sd;
+
+    }
 }
