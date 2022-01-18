@@ -1,27 +1,44 @@
 .home {
     background-image: url('../bg-images/background-home-mobile.jpg');
+    @include bg-img;
     background-color: $background;
     width: 100vw;
     height: 100vh;
-    padding: 0 20px;
+    // padding: 0 20px;
     display: grid;
     grid-template-rows: 1fr .5fr;
     color: $text-color-wk;
+    overflow: hidden;
 
     .desc {
         width: 327px;
         text-align: center;
         line-height: 1.5;
         align-self: center;
+        justify-self: center;
 
         p:nth-child(1),
         p:nth-child(2) {
             text-transform: uppercase;
             letter-spacing: .07cm;
+            text-align: center;
+        }
+
+        p:nth-child(1) {
+            font-family: ff(barlowC), sans-serif;
+            font-weight: weights(medium);
         }
 
         p:nth-child(2) {
-            font-size: 100px;
+            font-family: ff(bellefair), serif;
+            font-weight: weights(medium);
+            font-size: 80px;
+
+        }
+
+        p:nth-child(3) {
+            font-family: ff(barlow), sans-serif;
+            font-weight: weights(medium);
         }
     }
 
@@ -36,5 +53,29 @@
         background: $text-color-wk;
         color: $text-color-sd;
 
+        p {
+            text-transform: uppercase;
+            // font-family: ff(bellefair), serif;
+            font-weight: weights(medium);
+            letter-spacing:.07cm;
+            font-size:20px;
+        }
+    }
+}
+.aside {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    visibility: hidden;
+
+    .nav {
+        position: relative;
+        left: 35px;
+        transform: skewX(-12deg);
+        width: 500px;
+        height: 100%;
+        background: rgba(70, 17, 59, 0.04);
+        backdrop-filter: blur(81.5485px);
     }
 }
