@@ -1,6 +1,6 @@
 //  font-families : barlow, barlow condensed, beellefair 
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Barlow:wght@100&family=Bellefair&family=Poppins:wght@100&display=swap'); //bellefair
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Barlow:wght@100&family=Bellefair&family=Poppins:wght@100&display=swap');
 
 * {
     margin: 0;
@@ -8,7 +8,8 @@
     box-sizing: border-box;
 }
 
-$font-families: ("barlow": 'Barlow', "barlowC":'Barlow Condensed', "bellefair":'    Bellefair');
+$font-families: ("barlow": 'Barlow', "barlowC":'Barlow Condensed',
+    "bellefair":'Bellefair');
 
 @function ff($font-family) {
     @return map-get($font-families, $font-family);
@@ -20,19 +21,30 @@ $font-families: ("barlow": 'Barlow', "barlowC":'Barlow Condensed', "bellefair":'
     background-size: cover;
 }
 
-@mixin ff($font-family) {
-    font-family: '$font-family', sans-serif;
-}
-
 // typography
 $text-color-sd:hsla(230, 35%, 7%, 1);
 $text-color-md:hsla(231, 79%, 90%, 1);
 $text-color-wk:hsla(0, 0%, 100%, 1);
-
-$background: hsla(230, 35%, 7%, 1);
 
 $font-weights: ("regular": 200, "medium":400, "bold":600);
 
 @function weights($font-weight) {
     @return map-get($font-weights, $font-weight)
 }
+
+@mixin btn-transparent {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+@mixin icons-typography {
+    color: $text-color-wk;
+    font-size: 30px;
+}
+li {
+    list-style-type: none;
+}
+.link {
+     text-decoration: none;
+ }
+$background: hsla(230, 35%, 7%, 1);

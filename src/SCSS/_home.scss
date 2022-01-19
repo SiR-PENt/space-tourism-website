@@ -8,8 +8,7 @@
     display: grid;
     grid-template-rows: 1fr .5fr;
     color: $text-color-wk;
-    overflow: hidden;
-
+    
     .desc {
         width: 327px;
         text-align: center;
@@ -55,27 +54,10 @@
 
         p {
             text-transform: uppercase;
-            // font-family: ff(bellefair), serif;
+            font-family: ff(bellefair), poppins;
             font-weight: weights(medium);
             letter-spacing:.07cm;
             font-size:20px;
         }
-    }
-}
-.aside {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    visibility: hidden;
-
-    .nav {
-        position: relative;
-        left: 35px;
-        transform: skewX(-12deg);
-        width: 500px;
-        height: 100%;
-        background: rgba(70, 17, 59, 0.04);
-        backdrop-filter: blur(81.5485px);
     }
 }

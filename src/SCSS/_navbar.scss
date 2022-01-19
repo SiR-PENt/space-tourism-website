@@ -3,24 +3,75 @@ header {
   display: grid;
   grid-template-columns: auto auto;
   width: 100%;
-  top:25px;
-  padding:0 20px;
-  .img-logo {
-    width:40px;
-    height:40px;
-  }
-  .btn-container {
-       justify-self:end;
-       align-self:center;
+  top: 25px;
+  padding: 0 20px;
 
-    .nav-toggle {
-      border-color: transparent;
-      background-color: transparent;
+  .img-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .btn-container {
+    justify-self: end;
+    align-self: center;
+
+    .open-nav {
+      @include btn-transparent;
 
       .bars {
-        color:$text-color-wk;
-        font-size:25px;
+        @include icons-typography;
       }
+    }
+  }
+}
+
+.aside {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  .nav {
+    position: relative;
+    left: 35px;
+    transform: skewX(-12deg);
+    width: 770px;
+    height: 100%;
+    background: rgba(70, 17, 59, 0.04);
+    backdrop-filter: blur(81.5485px);
+  }
+}
+
+.close-nav {
+  position: absolute;
+  transform: skewX(12deg);
+  left: 230px;
+  top: 33px;
+  @include btn-transparent;
+
+  .times {
+    @include icons-typography;
+  }
+}
+
+ul {
+  transform: skewX(12deg);
+  position: absolute;
+  height: 35vh;
+  width: 30vw;
+  top: 100px;
+  left: 100px;
+  line-height: 3.5;
+
+  .link {
+    color: $text-color-wk;
+    font-family: ff(barlowC), sans-serif;
+    letter-spacing:.06cm;
+    font-weight:weights(medium);
+    .number {
+      position:relative;
+      right:5px;
+      font-weight:weights(bold);
     }
   }
 

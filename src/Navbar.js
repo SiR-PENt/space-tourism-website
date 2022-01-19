@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
 import logo from './logo.svg';
 import {useState} from 'react';
 import { Link } from 'react-router-dom';
@@ -11,7 +11,7 @@ const Navbar = () => {
         <header>  
         <img src={logo} alt='logo' className='img-logo'/>
         <div className='btn-container'>
-        <button className='nav-toggle'>{/* nav-toggle function(onClick ={() => setShowLinks(!showLinks)}) missing*/}
+        <button className='open-nav'>{/* nav-toggle function(onClick ={() => setShowLinks(!showLinks)}) missing*/}
         <FaBars className='bars'/>
         </button>  
         </div>    
