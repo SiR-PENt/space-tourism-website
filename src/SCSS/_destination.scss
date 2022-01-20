@@ -1,0 +1,103 @@
+.destination {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../bg-images/background-destination-mobile.jpg');
+    @include bg-img;
+    background-color: $background;
+    display: grid;
+    grid-template-rows: .3fr 1fr;
+    justify-items: center;
+    color: $text-color-wk;
+    font-weight: weights(medium);
+
+    & > p {
+        font-family:ff(barlowC), sans-serif;
+        align-self: center;
+        position: relative;
+        top: 20px;
+        text-transform: uppercase;
+        font-size:16px;
+        letter-spacing:2.7px;
+    }
+
+    .body {
+        display: grid;
+        grid-template-rows: auto auto;
+        justify-items: center;
+        .photo-container {
+            width: 170px;
+            height: 170px;
+            .photo {
+                object-fit: cover;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .info {
+            display: grid;
+            place-items: center;
+            position: relative;
+            top: -50px;
+            color: $text-color-wk;
+            padding: 0 20px;
+
+            ul {
+                width: 80vw;
+                display: grid;
+                place-items: center;
+                grid-template-columns: repeat(4, auto);
+
+                .name {
+                    text-transform: uppercase;
+                    letter-spacing: 2.36px;
+                    font-size:14px;
+                    font-family:ff(barlowC), sans-serif;
+                    cursor:pointer;
+                    padding-bottom:5px;
+                    //functionality class
+                    &.underline {
+                        border-bottom:3px solid $text-color-wk;
+                    }
+                }
+            }
+            article {
+                text-align: center;
+                border-bottom: 1px solid $text-color-wk;
+                padding-bottom: 20px;
+                p:nth-child(1){
+                    font-family:ff(bellefair), sans-serif;
+                    font-size: 56px;
+                    text-transform: uppercase;
+                }
+                p {
+                    font-family:ff(barlow), sans-serif;
+                    font-size:15px;
+                    position: relative;
+                    top: 8px;
+                    line-height: 1.5;
+                    letter-spacing:0.02cm;
+                }
+            }
+            footer {
+                display: grid;
+                grid-template-rows: auto auto;
+                grid-gap: 20px;
+                text-transform: uppercase;
+
+                .distance p:nth-child(2),
+                .travel p:nth-child(2) {
+                    font-size: 28px;
+                    font-family:ff(bellefair), sans-serif;
+                }
+                .distance,
+                .travel {
+                    font-family:ff(barlowC), sans-serif;
+                    line-height: 1.3;
+                    font-size:14px;
+                    letter-spacing: 2.36px;
+                }
+            }
+        }
+    }
+}
