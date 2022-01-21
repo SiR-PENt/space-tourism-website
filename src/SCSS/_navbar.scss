@@ -26,13 +26,18 @@ header {
 }
 
 .aside {
-  top:-25px;
+  top: -25px;
   position: absolute;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  visibility:hidden;
-
+  z-index: 9999;
+  transform: translateX(100%);
+  transition:all 0.5s linear;
+ 
+  &.show-links {
+    transform:translateX(0);
+  }
   .nav {
     position: relative;
     left: 35px;
@@ -68,10 +73,11 @@ ul.nav-links {
   .link {
     color: $text-color-wk;
     font-family: ff(barlowC), sans-serif;
-    letter-spacing:.06cm;
-    font-weight:weights(medium);
+    letter-spacing: .06cm;
+    font-weight: weights(medium);
+
     .number {
-     @include number;
+      @include number;
     }
   }
 }

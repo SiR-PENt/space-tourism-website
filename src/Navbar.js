@@ -11,13 +11,13 @@ const Navbar = () => {
         <header>  
         <img src={logo} alt='logo' className='img-logo'/>
         <div className='btn-container'>
-        <button className='open-nav'>{/* nav-toggle function(onClick ={() => setShowLinks(!showLinks)}) missing*/}
+        <button onClick={() => setShowLinks(true)}className='open-nav'>{/* nav-toggle function(onClick ={() => setShowLinks(!showLinks)}) missing*/}
         <FaBars className='bars'/>
         </button>  
         </div>
-         <aside className='aside'>
+         <aside className={`aside ${showLinks &&'show-links'}`}>
           <nav className='nav'>
-            <button className='close-nav'>
+            <button onClick={() => setShowLinks(false)} className='close-nav'>
                 < FaTimes className='times'/>
             </button>
             <ul className='nav-links'>
