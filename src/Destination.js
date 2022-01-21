@@ -8,9 +8,9 @@ const Destination = ({destination}) => {
     
     return (
         <section className='destination'>
-            <p>01 pick your destination</p>
-           <div className='body'>
+            <p><span className='number'>01</span> pick your destination</p>
 
+           <div className='body'>
            <div className='photo-container'>
                <img src={images.png} alt={name} className='photo'/>
             </div>

@@ -71,9 +71,7 @@ ul.nav-links {
     letter-spacing:.06cm;
     font-weight:weights(medium);
     .number {
-      position:relative;
-      right:5px;
-      font-weight:weights(bold);
+     @include number;
     }
   }
 }

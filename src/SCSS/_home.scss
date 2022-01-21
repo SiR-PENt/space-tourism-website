@@ -1,14 +1,9 @@
 .home {
     background-image: url('../bg-images/background-home-mobile.jpg');
     @include bg-img;
-    background-color: $background;
-    width: 100vw;
-    height: 100vh;
+    @include dimension(1fr, .5fr);
     // padding: 0 20px;
-    display: grid;
-    grid-template-rows: 1fr .5fr;
-    color: $text-color-wk;
-    
+  ;
     .desc {
         width: 327px;
         text-align: center;
@@ -24,20 +19,16 @@
         }
 
         p:nth-child(1) {
-            font-family: ff(barlowC), sans-serif;
-            font-weight: weights(medium);
+            font-family: ff(barlowC), sans-serif;           
         }
 
         p:nth-child(2) {
-            font-family: ff(bellefair), serif;
-            font-weight: weights(medium);
+            font-family: ff(bellefair), serif;        
             font-size: 80px;
-
         }
 
         p:nth-child(3) {
-            font-family: ff(barlow), sans-serif;
-            font-weight: weights(medium);
+            font-family: ff(barlow), sans-serif;         
         }
     }
 
@@ -54,8 +45,7 @@
 
         p {
             text-transform: uppercase;
-            font-family: ff(bellefair), poppins;
-            font-weight: weights(medium);
+            font-family: ff(bellefair), sans-serif;      
             letter-spacing:.07cm;
             font-size:20px;
         }
