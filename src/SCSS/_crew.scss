@@ -3,65 +3,77 @@
     @include bg-img;
     @include dimension(.3fr, 1fr);
     justify-items: center;
-    & > p {
+
+    &>p {
         @include sub-header;
+
         .number {
             @include number;
         }
     }
+
     .body {
         @include body;
+
         .photo-container {
-            width:327px;
-            height:223px;
-            
+            width: 327px;
+            height: 223px;
+
         }
+
         .info {
-           @include info(-100px);
-         
-           .btn-container {
-               display:grid;
-               grid-template-columns: repeat(4, auto);
-               width:86px;
-               
-               .btn{
-                   width:10px;
-                   height:10px;
-                   border-radius:50%;
-                   opacity:0.17;
-                   &.active {
-                       opacity:1;
-                   }
-               }
-           }
-        article {
-            align-self:start;
-            display:grid;
-            grid-gap:10px;
-            p {
-                text-align:center;
+            @include info(-100px);
+
+            .btn-container {
+                display: grid;
+                grid-template-columns: repeat(4, auto);
+                width: 86px;
+
+                .btn {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    opacity: 0.17;
+                    transition: all 0.5s ease;
+
+                    &.active {
+                        opacity: 1;
+                    }
+                }
             }
-            p:nth-child(1){
-                font-family:ff(bellefair), sans-serif;
-                font-weight:weights(medium);
-                font-size:16px;
-                text-align:center;
-                text-transform:uppercase;
-                opacity:0.17;
+
+            article {
+                align-self: start;
+                display: grid;
+                grid-gap: 10px;
+
+                p {
+                    text-align: center;
+                }
+
+                p:nth-child(1) {
+                    font-family: ff(bellefair), sans-serif;
+                    font-weight: weights(medium);
+                    font-size: 16px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    opacity: 0.17;
+                }
+
+                p:nth-child(2) {
+                    text-transform: uppercase;
+                    font-size: 24px;
+                    font-family: ff(bellefair), sans-serif;
+                    font-weight: weights(medium);
+                }
+
+                p:nth-child(3) {
+                    font-family: ff(barlow), sans-serif;
+                    font-weight: weight(medium);
+                    line-height: 25px;
+                    font-size: 15px;
+                }
             }
-            p:nth-child(2){
-                text-transform:uppercase;
-                font-size:24px;
-                font-family:ff(bellefair), sans-serif;
-                font-weight:weights(medium);
-            }
-            p:nth-child(3) {
-                font-family:ff(barlow), sans-serif;
-                font-weight:weight(medium);
-                line-height:25px;
-                font-size:15px;
-            }
-        }
         }
     }
 }

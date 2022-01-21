@@ -3,9 +3,10 @@
     background-image: url('../bg-images/background-destination-mobile.jpg');
     @include bg-img;
     justify-items: center;
-   
-    & > p {
-       @include sub-header;
+
+    &>p {
+        @include sub-header;
+
         .number {
             @include number;
         }
@@ -56,10 +57,12 @@
                 border-bottom: 1px solid $text-color-wk;
                 padding-bottom: 20px;
 
+
                 p:nth-child(1) {
                     font-family: ff(bellefair), sans-serif;
                     font-size: 56px;
                     text-transform: uppercase;
+                    transition: all 0.5s ease;
                 }
 
                 p {
@@ -69,6 +72,7 @@
                     top: 8px;
                     line-height: 1.5;
                     letter-spacing: 0.02cm;
+
                 }
             }
 
