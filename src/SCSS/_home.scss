@@ -19,7 +19,8 @@
         }
 
         p:nth-child(1) {
-            font-family: ff(barlowC), sans-serif;           
+            font-family: ff(barlowC), sans-serif; 
+            color:$text-color-md;          
         }
 
         p:nth-child(2) {
@@ -28,7 +29,8 @@
         }
 
         p:nth-child(3) {
-            font-family: ff(barlow), sans-serif;         
+            font-family: ff(barlow), sans-serif; 
+            color:$text-color-md;        
         }
     }
 

@@ -17,7 +17,6 @@ header {
 
     .open-nav {
       @include btn-transparent;
-
       .bars {
         @include icons-typography;
       }
@@ -40,7 +39,7 @@ header {
   }
   .nav {
     position: relative;
-    left: 35px;
+    left: 20px;
     transform: skewX(-12deg);
     width: 770px;
     height: 100%;
@@ -62,10 +61,11 @@ header {
 }
 
 ul.nav-links {
+  text-transform: uppercase;
   transform: skewX(12deg);
   position: absolute;
   height: 35vh;
-  width: 30vw;
+  width: 40vw;
   top: 100px;
   left: 100px;
   line-height: 3.5;
@@ -73,9 +73,9 @@ ul.nav-links {
   .link {
     color: $text-color-wk;
     font-family: ff(barlowC), sans-serif;
-    letter-spacing: .06cm;
+    letter-spacing: 2.7px;
     font-weight: weights(medium);
-
+     font-size:16px;
     .number {
       @include number;
     }

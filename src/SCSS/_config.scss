@@ -7,11 +7,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    width:100vw;
-    height:100vh;
-    overflow:hidden;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
+
 $font-families: ("barlow": 'Barlow', "barlowC":'Barlow Condensed',
     "bellefair":'Bellefair');
 
@@ -37,13 +39,10 @@ $font-weights: ("regular": 200, "medium":400, "bold":600);
     @return map-get($font-weights, $font-weight)
 }
 
-@mixin btn-transparent {
-    border-color: transparent;
-    background-color: transparent;
-}
+
 
 @mixin icons-typography {
-    color: $text-color-wk;
+    color: $text-color-md;
     font-size: 30px;
 }
 
@@ -88,9 +87,14 @@ $background: hsla(230, 35%, 7%, 1);
     justify-items: center;
 }
 
-@mixin info($x) {
+@mixin info($offsetY) {
     display: grid;
     place-items: center;
     position: relative;
-    top: $x;
+    top: $offsetY;
+}
+
+@mixin btn-transparent {
+    border-color: transparent;
+    background-color: transparent;
 }

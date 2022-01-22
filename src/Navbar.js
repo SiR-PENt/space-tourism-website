@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
    const [showLinks, setShowLinks] = useState(false);
-     
+     console.log(window.location.href);
     return (
         <header>  
         <img src={logo} alt='logo' className='img-logo'/>
