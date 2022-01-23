@@ -1,8 +1,9 @@
 import React from 'react'
-import { useState } from 'react';
-const Crew = ({crew}) => {
+import { useState, useEffect } from 'react';
+const Crew = ({crew, globalContext}) => {
     const [value, setValue] = useState(0);
       const {name, images, role, bio} = crew[value];
+    
     return (
         <section className='crew'>
          <p><span className='number'>02</span> Meet your crew</p>  

@@ -3,12 +3,13 @@ header {
   display: grid;
   grid-template-columns: auto auto;
   width: 100%;
-  top: 25px;
+  top: 0;
   padding: 0 20px;
-  
+
   .img-logo {
     width: 40px;
     height: 40px;
+    margin-top:25px;
   }
 
   .btn-container {
@@ -17,6 +18,7 @@ header {
 
     .open-nav {
       @include btn-transparent;
+
       .bars {
         @include icons-typography;
       }
@@ -25,26 +27,28 @@ header {
 }
 
 .aside {
-  top: -25px;
+ 
   position: absolute;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   z-index: 9999;
   transform: translateY(-100%);
-  transition:all 0.5s linear;
- 
+  transition: transform 0.5s linear;
+
   &.show-links {
-    transform:translateY(0);
+    transform: translateY(0);
   }
+
   .nav {
     position: relative;
-    left: 20px;
+    left: 35px;
     transform: skewX(-12deg);
     width: 770px;
     height: 100%;
     background: rgba(70, 17, 59, 0.04);
     backdrop-filter: blur(81.5485px);
+    
   }
 }
 
@@ -75,9 +79,55 @@ ul.nav-links {
     font-family: ff(barlowC), sans-serif;
     letter-spacing: 2.7px;
     font-weight: weights(medium);
-     font-size:16px;
+    font-size: 16px;
+
     .number {
       @include number;
     }
   }
 }
+
+//responsiveness
+@include media-md {
+  header {
+    height: 85px;  
+    .btn-container {
+      display: none;
+    }
+    .aside {
+      top: 0;
+      transform: translateY(0);
+      height: inherit;
+      .nav {       
+        height: inherit;
+        transform: skewX(0);
+        display: grid;
+        backdrop-filter: blur(0);
+        
+        background:transparent;
+        .close-nav {
+          display: none;
+        }
+        ul {
+          // backdrop-filter: blur(81.5485px);
+          transform: skewX(0);
+          width: 65vw;
+          left: 30vw;
+          top: 0;
+          background-color:rgba(70, 17, 59, 0.04);
+          padding-inline:10px;
+          place-items:center;
+          display: grid;
+          grid-template-columns: repeat(4, auto);
+          height: 85px;
+       
+          li {
+            .number {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+} // LOL, too much nesting, ikr

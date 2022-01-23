@@ -2,71 +2,95 @@
     background-image: url('../bg-images/background-technology-mobile.jpg');
     @include bg-img;
     @include dimension(.3fr, 1fr);
-    justify-items:center;
+    justify-items: center;
 
     &>p {
         @include sub-header;
+
         .number {
             @include number;
         }
     }
+
     .body {
         @include body;
+
         .photo-container {
-           width: 100vw;
-           height:170px;
-         
+            width: 100vw;
+            height: 170px;
         }
+
         .info {
             @include info(-50px);
-            
+
             .btn-container {
-                display:grid;
+                display: grid;
                 grid-template-columns: repeat(3, auto);
-                width:152px;
-                grid-gap:10px;
+                width: 152px;
+                grid-gap: 10px;
 
                 .btn {
-                    border-radius:50%;
-                    height:40px;
-                    color:$text-color-wk;
-                    width:40px;
-                    background-color:transparent;
-                    border:1px solid $text-color-md;
-                    font-family:ff(bellefair), sans-serif;
+                    border-radius: 50%;
+                    height: 40px;
+                    color: $text-color-wk;
+                    width: 40px;
+                    background-color: transparent;
+                    border: 1px solid $text-color-md;
+                    font-family: ff(bellefair), sans-serif;
+
                     &.active {
-                        color:$text-color-sd;
+                        color: $text-color-sd;
                         background-color: $text-color-wk;
                     }
                 }
             }
+
             article {
-                display:grid;
-                grid-gap:20px;
-                text-align:center;
-
-                p:nth-child(1){
-                    text-transform:uppercase;
-                    font-family:ff(barlowC), sans-serif;
-                    color:$text-color-md;
-                    letter-spacing:.08cm;
+                display: grid;
+                grid-gap: 20px;
+                text-align: center;
+                p:nth-child(1) {
+                    text-transform: uppercase;
+                    font-family: ff(barlowC), sans-serif;
+                    color: $text-color-md;
+                    letter-spacing: .08cm;
                 }
 
-                p:nth-child(2){
-                    text-transform:uppercase;
-                    font-size:24px;
+                p:nth-child(2) {
+                    text-transform: uppercase;
+                    font-size: 24px;
                     font-family: ff(bellefair), sans-serif;
-                    color:$text-color-wk;
+                    color: $text-color-wk;
                 }
 
-                p:nth-child(3){
-                    color:$text-color-md;
-                    line-height:25px;
-                    font-family:ff(barlow), sans-serif;
-                    font-size:15px;
-                    letter-spacing:.05px;
+                p:nth-child(3) {
+                   
+                    // padding-inline: 25px;
+                    color: $text-color-md;
+                    line-height: 25px;
+                    font-family: ff(barlow), sans-serif;
+                    font-size: 15px;
+                    letter-spacing: .05px;
                 }
             }
+        }
+    }
+}
+
+//responsiveness
+@include media-md {
+    .technology {
+        background-image: url('../bg-images/background-technology-tablet.jpg');
+    
+        &>p {
+            left:25px;
+            top: 35px;
+            justify-self: start;
+        }
+        .body {
+            .info{
+                width: 50vw;
+             }
         }
     }
 }

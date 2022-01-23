@@ -1,11 +1,11 @@
 import React from 'react';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
-const Destination = ({destination}) => {
+const Destination = ({destination, globalContext}) => {
 
     const [value, setValue] = useState(0);
     const { name, images, description, distance, travel} = destination[value];
-    
+    globalContext(); 
     return (
         <section className='destination'>
             <p><span className='number'>01</span> pick your destination</p>

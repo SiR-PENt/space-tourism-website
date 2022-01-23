@@ -1,20 +1,23 @@
 import React from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from './logo.svg';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
    const [showLinks, setShowLinks] = useState(false);
-     console.log(window.location.href);
+     
     return (
         <header>  
+
         <img src={logo} alt='logo' className='img-logo'/>
+
         <div className='btn-container'>
-        <button onClick={() => setShowLinks(true)}className='open-nav'>{/* nav-toggle function(onClick ={() => setShowLinks(!showLinks)}) missing*/}
+        <button onClick={() => setShowLinks(true)}className='open-nav'>
         <FaBars className='bars'/>
         </button>  
         </div>
+
          <aside className={`aside ${showLinks &&'show-links'}`}>
           <nav className='nav'>
             <button onClick={() => setShowLinks(false)} className='close-nav'>

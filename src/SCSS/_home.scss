@@ -3,7 +3,8 @@
     @include bg-img;
     @include dimension(1fr, .5fr);
     // padding: 0 20px;
-  ;
+    ;
+
     .desc {
         width: 327px;
         text-align: center;
@@ -19,18 +20,18 @@
         }
 
         p:nth-child(1) {
-            font-family: ff(barlowC), sans-serif; 
-            color:$text-color-md;          
+            font-family: ff(barlowC), sans-serif;
+            color: $text-color-md;
         }
 
         p:nth-child(2) {
-            font-family: ff(bellefair), serif;        
+            font-family: ff(bellefair), serif;
             font-size: 80px;
         }
 
         p:nth-child(3) {
-            font-family: ff(barlow), sans-serif; 
-            color:$text-color-md;        
+            font-family: ff(barlow), sans-serif;
+            color: $text-color-md;
         }
     }
 
@@ -47,9 +48,27 @@
 
         p {
             text-transform: uppercase;
-            font-family: ff(bellefair), sans-serif;      
-            letter-spacing:.07cm;
-            font-size:20px;
+            font-family: ff(bellefair), sans-serif;
+            letter-spacing: .07cm;
+            font-size: 20px;
+        }
+    }
+}
+
+//responsiveness
+@include media-md {
+    .home {
+        background-image: url('../bg-images/background-home-tablet.jpg');
+        grid-template-rows: 1.3fr .5fr;
+        .desc {
+            
+            p:nth-child(2){
+               font-size:100px;
+            }
+        }
+        .explore {
+            width:170px;
+            height:170px;
         }
     }
 }

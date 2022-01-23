@@ -39,8 +39,6 @@ $font-weights: ("regular": 200, "medium":400, "bold":600);
     @return map-get($font-weights, $font-weight)
 }
 
-
-
 @mixin icons-typography {
     color: $text-color-md;
     font-size: 30px;
@@ -98,3 +96,14 @@ $background: hsla(230, 35%, 7%, 1);
     border-color: transparent;
     background-color: transparent;
 }
+// responsiveness
+ @mixin media-md {
+    @media screen and (min-width: 768px){
+        @content;
+    }
+ }
+ @mixin media-lg {
+     @media screen and (min-width:1440px) {
+         @content;
+     }
+ }
