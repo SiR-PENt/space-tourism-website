@@ -12,7 +12,7 @@ const Destination = ({destination, globalContext}) => {
 
            <div className='body'>
            <div className='photo-container'>
-               <img src={images.png} alt={name} className='photo'/>
+               <img src={images.png} alt={name} className='photo' />
             </div>
 
            <div className='info'>

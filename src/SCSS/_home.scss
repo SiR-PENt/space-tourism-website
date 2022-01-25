@@ -55,20 +55,58 @@
     }
 }
 
-//responsiveness
+//Tablet design
 @include media-md {
     .home {
         background-image: url('../bg-images/background-home-tablet.jpg');
         grid-template-rows: 1.3fr .5fr;
+
         .desc {
-            
-            p:nth-child(2){
-               font-size:100px;
+
+            p:nth-child(2) {
+                font-size: 100px;
             }
         }
+
         .explore {
-            width:170px;
-            height:170px;
+            width: 170px;
+            height: 170px;
+        }
+    }
+}
+
+//desktop design
+@include media-lg {
+    .home {
+        background-image: url('../bg-images/background-home-desktop.jpg');
+        grid-template-columns: auto auto;
+
+        .desc {
+            align-self: end;
+            position: relative;
+            top: 50px;
+            text-align:left;
+            p:nth-child(1),p:nth-child(2){
+                text-align:left;
+            }
+        }
+
+        .explore {
+            align-self: end;
+            position: relative;
+
+            &:hover::before {
+                content: '';
+                background-color:$text-color-wk;
+                position: absolute;
+                width: 300px;
+                height: 300px;
+                opacity:0.1;
+                cursor: pointer;
+                border-radius: 50%;
+                transition:all 1s ease;
+                mix-blend-mode: normal;
+            }
         }
     }
 }

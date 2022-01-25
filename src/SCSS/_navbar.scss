@@ -18,7 +18,7 @@ header {
 
     .open-nav {
       @include btn-transparent;
-
+      margin-top:25px;
       .bars {
         @include icons-typography;
       }
@@ -87,7 +87,7 @@ ul.nav-links {
   }
 }
 
-//responsiveness
+//Tablet design
 @include media-md {
   header {
     height: 85px;  

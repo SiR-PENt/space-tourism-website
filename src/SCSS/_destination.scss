@@ -1,5 +1,5 @@
 .destination {
-    @include dimension(.3fr, 1fr);
+    @include dimension(.3fr, 1.5fr);
     background-image: url('../bg-images/background-destination-mobile.jpg');
     @include bg-img;
     justify-items: center;
@@ -14,15 +14,14 @@
 
     .body {
         @include body;
-
         .photo-container {
             width: 170px;
             height: 170px;
 
             .photo {
-                object-fit: cover;
+                object-fit: contain;
                 width: 100%;
-                height: auto;
+                height: 100%;
             }
         }
 
@@ -55,8 +54,6 @@
 
             article {
                 text-align: center;
-                border-bottom: 1px solid $text-color-wk;
-                padding-bottom: 20px;
 
                 p:nth-child(1) {
                     font-family: ff(bellefair), sans-serif;
@@ -64,6 +61,11 @@
                     text-transform: uppercase;
                     transition: all 0.5s ease;
                     color: $text-color-wk;
+                }
+
+                p:nth-child(2) {
+                    border-bottom: 1px solid $text-color-wk;
+                    padding-bottom: 20px;
                 }
 
                 p {
@@ -103,7 +105,7 @@
     }
 }
 
-//responsiveness
+//Tablet design
 
 @include media-md {
     .destination {
@@ -111,23 +113,70 @@
         padding-inline: 30px;
 
         &>p {
-            top:35px;
+            top: 35px;
             justify-self: start;
         }
+
         .body {
             .photo-container {
-                height:200px;
-                width:200px;
+                height: 200px;
+                width: 200px;
             }
-            .info{
-                padding-inline:50px;
+
+            .info {
+                padding-inline: 50px;
+
                 ul {
-                     width:40vw;
+                    width: 40vw;
                 }
                 footer {
-                    padding-top:20px;
-                    grid-template-columns:auto auto;
-                    grid-column-gap:100px;
+                    padding-top: 20px;
+                    grid-template-columns: auto auto;
+                    grid-column-gap: 100px;
+                }
+            }
+        }
+    }
+}
+
+//Desktop design
+@include media-lg {
+    .destination {
+        background-image: url('../bg-images/background-destination-desktop.jpg');
+
+        &>p {
+            position: relative;
+            left: 15vw;
+            top: 70px;
+        }
+
+        .body {
+            grid-template-columns: .8fr .4fr;
+            align-self: end;
+            width: 100vw;
+            .photo-container {
+                width: 50vw;
+            }
+            .info {
+                ul {
+                    justify-items: start;
+                }
+
+                article {
+                    width: 100%;
+                    text-align: left;
+
+                    p:nth-child(1) {
+                        font-size: 100px;
+                    }
+
+                    p:nth-child(2) {
+                        width: 444px;
+                        padding-bottom: 40px;
+                    }
+                }
+                footer {
+                    justify-self: start;
                 }
             }
         }

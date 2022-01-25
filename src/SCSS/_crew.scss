@@ -20,6 +20,11 @@
             height: 223px;
             border-bottom: 1px solid $text-color-md;
 
+            .photo {
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+            }
         }
 
         .info {
@@ -59,7 +64,7 @@
                     text-align: center;
                     text-transform: uppercase;
                     opacity: 0.17;
-                    letter-spacing:.05cm;
+                    letter-spacing: .05cm;
                 }
 
                 p:nth-child(2) {
@@ -81,50 +86,78 @@
     }
 }
 
-//responsiveness
+//Tablet design
 @include media-md {
     .crew {
         background-image: url('../bg-images/background-crew-tablet.jpg');
         padding-inline: 30px;
-       
+
         &>p {
             top: 35px;
             justify-self: start;
         }
+
         .body {
-           grid-template-areas:"info" "photo-container";
-           grid-template-rows: .5fr 1fr;
-           grid-row-gap: 20px;
-           .photo-container{
-             grid-area:photo-container;
-             border-bottom:1px solid transparent;          
-             height:100%;
-             width:100%;
-           }
-           .info {
-               grid-area:info;
-               top:0;
-               grid-template-areas:"article" "btn-container";
-               .btn-container{
-                   grid-area:btn-container;
-                   position:relative;
-                //    top:20px;
-               }
-               article {      
-                   height:auto;
-                   width:500px;
-                   grid-area:article;
-                   p:nth-child(1){
-                       opacity:0.5;
-                   }
-                   p:nth-child(2){
-                       font-size:28px;
-                   }
-                   p:nth-child(3){
-                       text-transform:justify;
-                   } 
-                }              
-           }
+            grid-template-areas: "info""photo-container";
+            grid-template-rows: auto auto;
+            grid-row-gap: 20px;
+
+            .photo-container {
+                grid-area: photo-container;
+                border-bottom: 1px solid transparent;
+                height: 572px;
+                width: 100%;
+            }
+
+            .info {
+                grid-area: info;
+                top: 0;
+                grid-template-areas: "article""btn-container";
+
+                .btn-container {
+                    grid-area: btn-container;
+                    position: relative;
+                    //    top:20px;
+                }
+
+                article {
+                    height: auto;
+                    width: 500px;
+                    grid-area: article;
+
+                    p:nth-child(1) {
+                        opacity: 0.5;
+                    }
+
+                    p:nth-child(2) {
+                        font-size: 40px;
+                    }
+
+                    p:nth-child(3) {
+                        text-transform: justify;
+                        line-height: 27.5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//responsiveness on desktop
+@include media-lg {
+    .crew {
+        background-image: url('../bg-images/background-crew-desktop.jpg');
+
+        .body {
+            border:1px solid red;
+            grid-template-columns: .8fr .4fr; 
+            grid-template-areas: "info container";
+            .photo-container {
+                
+            }
+            .info {
+         
+            }
         }
     }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Home = ({globalContext}) => {
-     globalContext();
+    
     return (    
 
          <section className='home'>
