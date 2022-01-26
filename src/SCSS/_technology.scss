@@ -18,10 +18,11 @@
         .photo-container {
             width: 375px;
             height: 170px;
+
             .photo {
-                object-fit:contain;
-                width:100%;
-                height:100%;
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
             }
         }
 
@@ -54,6 +55,7 @@
                 display: grid;
                 grid-gap: 20px;
                 text-align: center;
+
                 p:nth-child(1) {
                     text-transform: uppercase;
                     font-family: ff(barlowC), sans-serif;
@@ -69,7 +71,6 @@
                 }
 
                 p:nth-child(3) {
-                   
                     padding-inline: 15px;
                     color: $text-color-md;
                     line-height: 25px;
@@ -86,23 +87,87 @@
 @include media-md {
     .technology {
         background-image: url('../bg-images/background-technology-tablet.jpg');
-    
+
         &>p {
-            left:25px;
+            left: 25px;
             top: 35px;
             justify-self: start;
         }
+
         .body {
             .photo-container {
-                width:768px;
-                height:310px;
-                 
+                width: 768px;
+                height: 310px;
             }
-            .info{
+
+            .info {
                 width: 50vw;
-             }
+            }
         }
     }
 }
 
 //on desktop
+@include media-lg {
+    .technology {
+        background-image: url('../bg-images/background-technology-desktop.jpg');
+
+        &>p {
+            position: relative;
+            left: 5.5vw;
+            top: 70px;
+        }
+
+        .body {
+            grid-template-columns: auto auto;
+            grid-template-areas: "info photo-container";
+            width: 100%;
+
+            .photo-container {
+                grid-area: photo-container;
+                width: 515px;
+                height: 100%;
+                justify-self: end;
+
+                .photo {
+                    object-fit: cover;
+                    ;
+                }
+            }
+
+            .info {
+                top: 0;
+                grid-template-areas: "btn-container article";
+                // width:50%;
+                grid-area: info;
+
+                // width:45vw;
+                align-self: center;
+
+                .btn-container {
+                    grid-area: btn-container;
+                    grid-template-rows: repeat(3, auto);
+                    grid-template-columns: auto;
+
+                    height: 100%;
+                    width: fit-content;
+                    align-items: center;
+                }
+
+                article {
+
+                    width: 470px;
+                    grid-area: article;
+
+                    p {
+                        text-align: left;
+                    }
+
+                    p:nth-child(3) {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}

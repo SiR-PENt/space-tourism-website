@@ -9,7 +9,7 @@ header {
   .img-logo {
     width: 40px;
     height: 40px;
-    margin-top:25px;
+    margin-top: 25px;
   }
 
   .btn-container {
@@ -18,7 +18,8 @@ header {
 
     .open-nav {
       @include btn-transparent;
-      margin-top:25px;
+      margin-top: 25px;
+
       .bars {
         @include icons-typography;
       }
@@ -27,7 +28,7 @@ header {
 }
 
 .aside {
- 
+
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -41,6 +42,7 @@ header {
   }
 
   .nav {
+
     position: relative;
     left: 35px;
     transform: skewX(-12deg);
@@ -48,7 +50,7 @@ header {
     height: 100%;
     background: rgba(70, 17, 59, 0.04);
     backdrop-filter: blur(81.5485px);
-    
+
   }
 }
 
@@ -74,6 +76,7 @@ ul.nav-links {
   left: 100px;
   line-height: 3.5;
 
+
   .link {
     color: $text-color-wk;
     font-family: ff(barlowC), sans-serif;
@@ -90,37 +93,42 @@ ul.nav-links {
 //Tablet design
 @include media-md {
   header {
-    height: 85px;  
+    height: 85px;
+
     .btn-container {
       display: none;
     }
+
     .aside {
       top: 0;
       transform: translateY(0);
       height: inherit;
-      .nav {       
+
+      .nav {
         height: inherit;
         transform: skewX(0);
         display: grid;
         backdrop-filter: blur(0);
-        
-        background:transparent;
+        background: transparent;
+
         .close-nav {
           display: none;
         }
+
         ul {
           // backdrop-filter: blur(81.5485px);
           transform: skewX(0);
-          width: 65vw;
-          left: 30vw;
+          width: 50vw;
+          left:45vw;
           top: 0;
-          background-color:rgba(70, 17, 59, 0.04);
-          padding-inline:10px;
-          place-items:center;
+          background-color: rgba(70, 17, 59, 0.04);
+          padding-inline: 10px;
+          place-items: center;
           display: grid;
           grid-template-columns: repeat(4, auto);
           height: 85px;
-       
+          
+
           li {
             .number {
               display: none;
@@ -130,4 +138,7 @@ ul.nav-links {
       }
     }
   }
-} // LOL, too much nesting, ikr
+}
+
+// LOL, too much nesting, ikr
+// desktop design
