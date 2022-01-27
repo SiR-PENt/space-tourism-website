@@ -1,7 +1,7 @@
 .crew {
     background-image: url('../bg-images/background-crew-mobile.jpg');
     @include bg-img;
-    @include dimension(.3fr, 1fr);
+    @include dimension(.3fr, 1fr);//.3fr 1fr
     justify-items: center;
     &>p {
         @include sub-header;
@@ -22,11 +22,13 @@
             }
         }
         .info {
-            @include info(-100px);
+            @include info;//-100px
+
             .btn-container {
                 display: grid;
                 grid-template-columns: repeat(4, auto);
                 width: 86px;
+
                 .btn {
                     width: 10px;
                     height: 10px;
@@ -34,6 +36,7 @@
                     opacity: 0.17;
                     transition: all 0.5s ease;
                     cursor: pointer;
+
                     &.active {
                         opacity: 1;
                     }
@@ -85,8 +88,7 @@
 
         &>p {
             top: 35px;
-            justify-self: start;
-        
+            justify-self: start;        
         .body {
             grid-template-areas: "info""photo-container";
             grid-row-gap: 20px;
@@ -97,8 +99,7 @@
                 width: 100%;
             }
             .info {
-                grid-area: info;
-                top: 0;
+                grid-area: info;      
                 grid-template-areas: "article""btn-container";
                 .btn-container {
                     grid-area: btn-container;
@@ -130,29 +131,36 @@
 @include media-lg {
     .crew {
         background-image: url('../bg-images/background-crew-desktop.jpg');
-
-        &>p {
-            position: relative;
-            left: 10.5vw;
-            top: 70px;
-        }
+        padding-inline: 140px;
+        // &>p {
+        //     border:1px solid red;
+        //     position: relative;
+        //     left: 10.5vw;
+        //     top: 70px;
+        // }
 
         .body {
             grid-template-columns: auto auto;
             grid-template-areas: "info photo-container";
             width: 80vw;       
             .photo-container {
+                grid-area:photo-container;
                 width: 50vw;
                 height: 450px;
+                border-bottom:1px solid transparent;
             }
 
             .info {
+                grid-area:info;
+                grid-template-areas: "article" "btn-container";
                 width: 37vw;
                 .btn-container {
+                    grid-area:btn-container;
                     justify-self: start;
                 }
 
                 article {
+                    grid-area:article;
                     text-align: left;
                     justify-self: center;
                     align-self: center;

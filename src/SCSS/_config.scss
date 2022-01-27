@@ -10,7 +10,7 @@
 
 body {
     width: 100vw;
-    height: 100vh;
+    height:100vh;
     overflow: hidden;
 }
 
@@ -82,15 +82,15 @@ $background: hsla(230, 35%, 7%, 1);
 
 @mixin body {
     display: grid;
-    grid-template-rows: auto auto; 
+    grid-template-rows: .5fr auto; 
     justify-items: center;
 }
 
-@mixin info($offsetY) {
+@mixin info {
     display: grid;
     place-items: center;
     position: relative;
-    top: $offsetY;
+   
 }
 
 @mixin btn-transparent {

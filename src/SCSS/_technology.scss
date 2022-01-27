@@ -27,7 +27,7 @@
         }
 
         .info {
-            @include info(-50px);
+            @include info; //-50
 
             .btn-container {
                 display: grid;
@@ -111,23 +111,29 @@
 @include media-lg {
     .technology {
         background-image: url('../bg-images/background-technology-desktop.jpg');
-
-        &>p {
-            position: relative;
-            left: 5.5vw;
-            top: 70px;
-        }
+        padding-inline:70px;
+        // &>p {
+        //     position: relative;
+        //     left: 5.5vw;
+        //     top: 70px;
+        // }
 
         .body {
             grid-template-columns: auto auto;
             grid-template-areas: "info photo-container";
             width: 100%;
 
+            transform: translate(-50%, -50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
             .photo-container {
                 grid-area: photo-container;
                 width: 515px;
                 height: 100%;
                 justify-self: end;
+                height: 450px;
 
                 .photo {
                     object-fit: cover;
@@ -140,9 +146,9 @@
                 grid-template-areas: "btn-container article";
                 // width:50%;
                 grid-area: info;
-
                 // width:45vw;
                 align-self: center;
+
 
                 .btn-container {
                     grid-area: btn-container;
@@ -155,7 +161,6 @@
                 }
 
                 article {
-
                     width: 470px;
                     grid-area: article;
 

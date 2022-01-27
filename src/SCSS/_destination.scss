@@ -14,9 +14,11 @@
 
     .body {
         @include body;
+
         .photo-container {
             width: 170px;
-            height: 170px;
+            min-height: 100px;
+
             .photo {
                 object-fit: contain;
                 width: 100%;
@@ -25,7 +27,7 @@
         }
 
         .info {
-            @include info(-50px);
+            @include info; //-50
             color: $text-color-wk;
             padding: 0 20px;
 
@@ -124,10 +126,12 @@
 
             .info {
                 padding-inline: 50px;
+                
 
                 ul {
                     width: 40vw;
                 }
+
                 footer {
                     padding-top: 20px;
                     grid-template-columns: auto auto;
@@ -142,21 +146,28 @@
 @include media-lg {
     .destination {
         background-image: url('../bg-images/background-destination-desktop.jpg');
-
-        &>p {
-            position: relative;
-            left: 15vw;
-            top: 70px;
-        }
+        padding-inline:120px;
+        // &>p {
+        //     position: relative;
+        //     left: 15vw;
+        //     top: 70px;
+        // }
 
         .body {
-            grid-template-columns: .8fr .4fr;
-            align-self: end;
-            width: 100vw;
+            grid-template-columns: auto auto;    
+            width: 100%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+           
             .photo-container {
-                width: 50vw;
+                width: 30vw;
+                align-self:center;
             }
+
             .info {
+                height:400px;
                 ul {
                     justify-items: start;
                 }
@@ -174,6 +185,7 @@
                         padding-bottom: 40px;
                     }
                 }
+
                 footer {
                     justify-self: start;
                 }
