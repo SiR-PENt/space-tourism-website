@@ -157,6 +157,11 @@
                 .btn-container {
                     grid-area:btn-container;
                     justify-self: start;
+                    width:132px;
+                    .btn {
+                        width:15px;
+                        height:15px;
+                    }
                 }
 
                 article {

@@ -1,13 +1,14 @@
 import React from 'react';
-import {useState, useEffect} from 'react';
-
-const Destination = ({destination, globalContext}) => {
+import {useState} from 'react';
+import Navbar from './Navbar';
+const Destination = ({destination}) => {
 
     const [value, setValue] = useState(0);
     const { name, images, description, distance, travel} = destination[value];
-    globalContext(); 
+  
     return (
         <section className='destination'>
+            <Navbar/>
             <p><span className='number'>01</span> pick your destination</p>
 
            <div className='body'>

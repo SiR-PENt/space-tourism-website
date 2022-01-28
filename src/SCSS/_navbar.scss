@@ -15,7 +15,7 @@ header {
   .btn-container {
     justify-self: end;
     align-self: center;
-
+   
     .open-nav {
       @include btn-transparent;
       margin-top: 25px;
@@ -42,7 +42,6 @@ header {
   }
 
   .nav {
-
     position: relative;
     left: 35px;
     transform: skewX(-12deg);
@@ -50,17 +49,17 @@ header {
     height: 100%;
     background: rgba(70, 17, 59, 0.04);
     backdrop-filter: blur(81.5485px);
-
   }
 }
 
 .close-nav {
-  position: absolute;
+  position:relative;
+  left:50vw;
   transform: skewX(12deg);
-  left: 230px;
-  top: 33px;
+  // left: 230px;
+  // top: 33px;
+  margin-top:25px;
   @include btn-transparent;
-
   .times {
     @include icons-typography;
   }
@@ -76,19 +75,34 @@ ul.nav-links {
   left: 100px;
   line-height: 3.5;
 
-
-  .link {
-    color: $text-color-wk;
-    font-family: ff(barlowC), sans-serif;
-    letter-spacing: 2.7px;
-    font-weight: weights(medium);
-    font-size: 16px;
-
-    .number {
-      @include number;
+  li {
+    transform: translateX(100vw);
+    transition:transform 0.5s ease-in;
+    &.open {
+      transform: translateX(0);
     }
+
+    .link {
+      color: $text-color-wk;
+      font-family: ff(barlowC), sans-serif;
+      letter-spacing: 2.7px;
+      font-weight: weights(medium);
+      font-size: 16px;
+
+      .number {
+        @include number;
+      }
+    }
+
+  }
+
+}
+@for $i from 1 through 4 {
+ .nav-links li:nth-child(#{$i}) {
+    transition-delay: ($i * 0.1s) + 0.15s;
   }
 }
+
 
 //Tablet design
 @include media-md {
@@ -119,7 +133,7 @@ ul.nav-links {
           // backdrop-filter: blur(81.5485px);
           transform: skewX(0);
           width: 50vw;
-          left:45vw;
+          left: 45vw;
           top: 0;
           background-color: rgba(70, 17, 59, 0.04);
           padding-inline: 10px;
@@ -127,9 +141,10 @@ ul.nav-links {
           display: grid;
           grid-template-columns: repeat(4, auto);
           height: 85px;
-          
+
 
           li {
+            transform:translateX(0);
             .number {
               display: none;
             }

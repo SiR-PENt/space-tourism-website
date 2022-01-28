@@ -1,13 +1,14 @@
 import React from 'react'
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
+import Navbar from './Navbar';
 
 const Technology = ({technology}) => {
     const [value, setValue] = useState(0);
     const {name, images, description} = technology[value];
-    
-    //  useEffect(() => setShowLinks(false), [])
+  
     return (
         <section className='technology'>
+          <Navbar/>
           <p><span className='number'>03</span>space header 101</p>
 
           <div className='body'>
