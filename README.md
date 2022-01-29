@@ -1,3 +1,79 @@
+
+## Table of contents
+
+- [Overview](#overview)
+  <!-- - [The challenge](#the-challenge) -->
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+## Overview
+  Explore planets you can go with this space tourism website. 
+
+
+### Links
+
+- Live Site URL: [https://space-de-tourism.netlify.app](https://space-de-tourism.netlify.app.com)
+
+## My process
+ Built the components and added functionality with react first, then styled with Sass/scss
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+
+
+### What I learned
+
+Building this project, I have learnt how more about how react rendering works, how that images to be added dynamically should be in public folder in react. 
+
+The css was also challenging. I learnt about css backdrop-filter which I used in the mobile nav menu.
+
+```css : backdrop-filter
+.nav {
+  backdrop-filter: blur(81.5485px);
+}
+```
+
+### Continued development
+
+Hmmm, Areas I will like to continue focusing on in my future projects include 
+- RWD
+- React router
+- Semantic HTML
+
+
+### Useful resources
+
+- [https://geekflare.com/react-rendering/](https://geekflare.com/react-rendering/) - This helped me understand more on how react renders components.
+
+
+## Author
+
+- Frontend Mentor - [@sukodes](https://www.frontendmentor.io/profile/sukodes)
+- Twitter - [@olasunkanmiiii](https://www.twitter.com/olasunkanmiiii)
+
+
+## Acknowledgments
+
+Well, special shoutout to stackOverflow, my  goto place to fix a bug.
+
+* Hats off to [@John_smilga](https://www.twitter.com/john_smilga), my go-to person whenever I want to learn sth new. Learnt react from his youTube channel(Coding Addict). 
+
+
+## Running the aplication
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
